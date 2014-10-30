@@ -1,35 +1,21 @@
-# core jekyll configs
-exclude: ['README.md', 'config.rb']
+# Site settings
+title: Travelog
+subtitle: "Journal of [name]"
+email: your-email@domain.com
+description: "Make the footer happy by entering a short description about yourself here"
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: "rowanoulton"
+github_username:  "rowanoulton"
+instagram_username: "rowanoulton"
 
-# content settings
-permalink: none
-pygments: true
-markdown: redcarpet
-redcarpet:
-  extensions: ["with_toc_data"]
+# Build settings
+markdown: kramdown
+permalink: pretty
 
-# global site configs
-domain: http://draftingcode.com/jekyll-seed
-name: jekyll-seed
-tagline: grow a modern static site with Jekyll
-abstract: derp
-owner: Zachary Kain
-email: zakkain@gmail.com
-repo: jekyll-seed
+# Pagination
+paginate: 5
 
-# web services
-twitter: zakkain
-github: zakkain
-typekit: ''
-
-# analytics accounts (only builds scripts for non-default values)
-analytics:
-  google: ''
-  # add your own here! gaug.es, etc
-
-# prose config
-prose:
-  rooturl: '_posts'
-  media: 'media'
-  # siteurl: 'http://heistmade.com'
-  # relativeLinks: 'http://heistmade.com/links.jsonp'
+# Sass
+sass:
+    style: :compressed

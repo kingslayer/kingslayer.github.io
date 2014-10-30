@@ -1,30 +1,35 @@
-# Jekyll Seed
+Travelog Theme
+---
 
-This is an initial seed structure for creating new projects using Jekyll.
+Travelog is a theme for [Jekyll](http://jekyllrb.com/) that is both elegant and downright simple.
 
-Some highlights:
+![](http://i.imgur.com/FrNwKav.png)
 
-- focus on includes and modular structure
-- Sass for CSS preprocessing
-- full favicon/touch/tile icon support
-- Twitter Card & openGraph (Facebook) `<meta>` tags
-- lots more
+In addition to being devilishly handsome, it is responsive down to mobile and has a very light footprint. Travelog lends itself well to photography and travel journaling.
 
-## Dev Notes
+It has been designed to be an easy layout to modify for your own blog. See the installation instructions below to get started.
 
-todo: all the icons and stuff
+### Installation
 
-- logo-social 280x280
-- mstile 144x144
-- favicon.png 32x32
-- favicon.ico 16x16 and 32x32 (http://xiconeditor.com/)
-- basic touch icon 57x57
+- Install Jekyll: `gem install jekyll`
+- [Fork this repository](https://github.com/rowanoulton/travelog-theme/fork)
+- Clone it: `git clone https://github.com/YOUR-USER/travelog-theme`
+- Run the jekyll server: `jekyll serve -w`
 
-log the various page YAML variables I've set up:
+You should have a server up and running locally at <http://localhost:4000>.
 
-- page.abstract
-- page.title
-- page.twittercard.type [photo]
-- page.twittercard.width
-- page.twittercard.height
-- page.twittercard.image
+### Customization 
+
+To customize the theme to your hearts content, check out what's in `_config.yml` as that's where you'll pull your name, Twitter username, things like that.
+
+
+### Deployment
+
+Travelog is designed to be deployed to [GitHub Pages](https://pages.github.com/). 
+
+
+### License
+
+[MIT](https://github.com/rowanoulton/travelog-theme/blob/master/LICENSE)
+
+Attribution is totally not necessary, use it as you please. If you'd like to throw me a shoutout or say thanks, I'm on [@rowanoulton](https://twitter.com/rowanoulton/).
