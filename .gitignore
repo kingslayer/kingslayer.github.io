@@ -1,5 +1,2 @@
-# Jekyll
-_site
-
-# Sass
-.sass-cache
+_site/
+.DS_Store
