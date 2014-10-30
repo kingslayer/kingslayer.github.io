@@ -18,5 +18,5 @@ Voor iedereen zonder electronica opleiding maar met interesse om zelf te starten
 
 Sound good? Let's go!
 
-Hoe schrijf je in: basicelectronics@cvoantwerpen.be
+Hoe schrijf je in: basic_electronics@cvoantwerpen.be
 
