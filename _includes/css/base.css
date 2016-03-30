@@ -277,9 +277,6 @@
 .highlighttable pre, .highlighttable code { display:block; margin:0; padding:0; background: none; overflow:auto; word-wrap: normal; }
 
 .highlight, .linenodiv {
-  background: none;
-/*  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWPQ1dU1BgABzQC7XXMTYQAAAABJRU5ErkJggg==);
-*/
   display:block;
   padding: 10px;
   margin-bottom:20px;
@@ -365,4 +362,5 @@ span.lineno {
 .gh { } /* Generic Heading & Diff Header */
 .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
 .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
+.gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */

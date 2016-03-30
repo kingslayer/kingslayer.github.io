@@ -49,6 +49,22 @@ pre {
 }
 
 .highlighttable { margin:4px 5%; }
+  background: rgba(255,255,255,0.2);
+  display: inline;
+  word-wrap: break-word;
+}
+
+/* block code */
+pre code { background: none; display: block; }
+pre {
+  display: block;
+  margin: 20px 5%;
+  padding: 4px 8px;
+  background: rgba(255,255,255,0.1);
+  word-wrap: break-word;
+}
+
+.highlighttable { margin:20px 5%; }
 
 
 /* ----- base elements ----- */
@@ -136,7 +152,7 @@ nav ul {
 nav ul li {
   display:inline-block;
   border-top:{{navborder}}px solid;
-  padding: {{navborder}}px;
+  padding: {{navborder}}px 0;
   *display:inline;
   zoom:1;
   line-height:normal;
