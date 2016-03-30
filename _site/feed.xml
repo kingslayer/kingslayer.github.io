@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2016-03-28T00:46:51+00:00</updated>
+<updated>2016-03-30T01:20:27+00:00</updated>
 <id>/</id>
 <author>
   <name>daniel</name>
@@ -186,29 +186,29 @@
     <email>d@nny.io</email>
   </author>
   <content type="html">
-    
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# list committers by commit count&lt;/span&gt;
-git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(objectname)&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;r&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:%an &lt;span class=&quot;s2&quot;&gt;&amp;quot;$r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sort &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; uniq -c &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sort -n
+    &lt;h1 id=&quot;list-committers-by-commit-count&quot;&gt;list committers by commit count&lt;/h1&gt;
 
-&lt;span class=&quot;c&quot;&gt;# git log one-liners&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;-each-ref --format&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%(objectname)&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;r&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:%an &lt;span class=&quot;s2&quot;&gt;&amp;quot;$r&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sort &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; uniq -c &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sort -n&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;span class=&quot;c&quot;&gt;# hash&lt;/span&gt;
-git rev-parse HEAD &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; cut -c 1-7
+&lt;h1 id=&quot;hash&quot;&gt;hash&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git rev-parse HEAD &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; cut -c 1-7
 git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&amp;quot;%h&amp;quot;&lt;/span&gt; -1
-git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; head -n1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $1}&amp;#39;&lt;/span&gt;
+git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; head -n1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;{print $1}&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;span class=&quot;c&quot;&gt;# message&lt;/span&gt;
-git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&amp;quot;%s&amp;quot;&lt;/span&gt; -1
-git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; head -n1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;BEGIN{ORS=&amp;quot; &amp;quot;}{for(i=2;i&amp;lt;NF;i++){print $i}}&amp;#39;&lt;/span&gt;
+&lt;h1 id=&quot;message&quot;&gt;message&lt;/h1&gt;
 
-&lt;span class=&quot;c&quot;&gt;# refs&lt;/span&gt;
-git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt; -1
-git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit --decorate &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\ &lt;/span&gt;
-head -n1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;BEGIN{ORS=&amp;quot; &amp;quot;}{for(i=2;i&amp;lt;NF;i++){print $i}}&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/(//;s/)[^)]*$//&amp;#39;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&amp;quot;%s&amp;quot;&lt;/span&gt; -1
+git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; head -n1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;BEGIN{ORS=&amp;quot; &amp;quot;}{for(i=2;i&amp;lt;NF;i++){print $i}}&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;span class=&quot;c&quot;&gt;# timestamp&lt;/span&gt;
-git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&amp;quot;%at&amp;quot;&lt;/span&gt; -1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;refs&quot;&gt;refs&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt; -1
+git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;oneline --abbrev-commit --decorate &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; head -n1 &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;BEGIN{ORS=&amp;quot; &amp;quot;}{for(i=2;i&amp;lt;NF;i++){print $i}}&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/(//;s/)[^)]*$//&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;timestamp&quot;&gt;timestamp&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git log --pretty&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:&lt;span class=&quot;s2&quot;&gt;&amp;quot;%at&amp;quot;&lt;/span&gt; -1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 
     &lt;p&gt;&lt;a href=&quot;/git/&quot;&gt;git&lt;/a&gt; was originally published by daniel at &lt;a href=&quot;&quot;&gt;cheat sheet&lt;/a&gt; on January 02, 2000.&lt;/p&gt;

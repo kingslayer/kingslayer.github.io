@@ -533,6 +533,7 @@ pre {
 */
   padding: 10px;
   background: rgb(39,40,34);
+  white-space: pre-wrap;
 }
 
 .highlighttable { margin:4px 5%; }
